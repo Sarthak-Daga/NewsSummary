@@ -12,6 +12,11 @@ collection = db['LoginData']
 def index():
     return render_template('signuppage.html')
 
+@app.route('/pageofinterests')
+def pageofinterests():
+    return render_template('POI.html')
+
+
 @app.route('/signup', methods=['POST'])
 def signup():
     if request.method == 'POST':
@@ -36,7 +41,9 @@ def signup():
         }
         collection.insert_one(user_data)
         
-        return redirect(url_for('success'))
+        # Redirect to the page of interest after successful signup
+        return redirect(url_for('pageofinterests'))
+
 
 @app.route('/success')
 def success():
