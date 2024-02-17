@@ -1,0 +1,50 @@
+body {
+  font-family: serif;
+  background-color: rgba(104, 193, 52, 0.42);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.head {
+  font-size: 50px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.head1{
+  font-size:25px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.slanted-button {
+  background-color: #fdfbf9;
+  color: #088242;
+  border: 1.21px solid #088242;
+  font-size: 24px; /* Increase font size for buttons */
+  transform: skewX(-10deg);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px; /* Increase margin between buttons */
+  padding-left: 30px; /* Increase padding for buttons */
+  padding-right: 30px; /* Increase padding for buttons */
+  padding-top: 8px; /* Increase padding for buttons */
+  padding-bottom: 8px; /* Increase padding for buttons */
+}
+
+.slanted-button:hover {
+  background-color: #088242;
+  color: #fdfbf9;
+}
+
+.slanted-button span {
+  display: block;
+  transform: skewX(10deg);
+}

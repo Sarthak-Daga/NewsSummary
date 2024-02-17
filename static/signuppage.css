@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: arial;
+  background: url('background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.Content {
+  border:2px solid rgba(255,255,255,.2);
+  width: 250px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.516);
+  border-radius: 15px;
+}
+
+.input {
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  height:30px;
+  width:200px;
+  border:none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.721);
+}
+::placeholder{
+  color:rgba(0, 0, 0, 0.8);
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+}
+
+h1{
+  text-align: center;
+}
+p{
+  padding: 0px;
+  margin: 5px;
+}
+
+button{
+  justify-content: center;
+  height: 35px;
+  width:100px;
+  font-size: larger;
+  text-align: centre;
+  margin-left:77px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.374);
+  border-radius: 10px;
+  border:2px solid rgba(255, 255, 255, 0.5);
+  font-weight:400;
+  transition: background-color 0.7s font-weight 0.7s;
+}
+
+button:hover{
+  background-color: white;
+  font-weight: bold;
+}
+
+.account{
+  font-size: smaller;
+  margin:20px;
+  font-weight: bold;
+}
+.signin{
+  color: rgb(0, 85, 255);
+  text-decoration: solid underline;
+  cursor: pointer;
+}
