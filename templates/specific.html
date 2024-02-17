@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .article {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .article img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .article p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .article a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% for article in articles %}
+        <div class="article">
+            <h2>{{ article.title }}</h2>
+            <p>Author: {{ article.author }}</p>
+            {% if article.image %}
+            <img src="{{ article.image }}" alt="Article Image">
+            {% endif %}
+            <p>{{ article.summary }}</p>
+            <a href="{{ article.url }}">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
