@@ -1,5 +1,4 @@
 # NewsSummary
-News Reccomendation website for HackIIITV
-Utilising Figma,HTML,CSS,JS,MYSQL
-Basic idea is to recommend news according to the users's taste
-(Extra feature-> Text to speech)
+News website for HackIIITV
+Utilising Figma,HTML,CSS,JS,Python,Flask,MongoDB
+By:-Ayush Mishra, Sarthak Daga , Piyush Kumar and Utkarsh Tiwari
