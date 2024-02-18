@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <img src="/static/logo2 1.png" alt="Logo" width="50" style="border-radius: 50%;">
+    </div>
+    <div class="menu">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="/Technology">Technology</a>
+        <a href="/Bussiness">Business</a>
+        <a href="/f">Finance</a>
+        <a href="/sports">Sports</a>
+    </div>
+</div>
+
+<h1>Top Trending News</h1>
+
+<div class="articles">
+    {% for article in articles %}
+    <div class="article">
+        <h2>{{ article.title }}</h2>
+        {% if article.urlToImage %}
+        <img src="{{ article.urlToImage }}" alt="{{ article.title }}">
+        {% else %}
+        <p>No image available</p>
+        {% endif %}
+        <p>{{ article.description }}</p>
+        <p><strong>Author:</strong> {% if article.author %}{{ article.author }}{% else %}Unknown{% endif %}</p>
+        <p><a href="{{ article.url }}" target="_blank">Read more</a></p>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

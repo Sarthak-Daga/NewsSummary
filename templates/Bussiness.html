@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussiness</title>
+    <link rel="stylesheet" href="/static/cc.css">
+</head>
+<body>
+    <h1>Trending articles in Bussiness</h1>
+    <div class="container">
+        {% for article in articles %}
+        <div class="article">
+            <h2>{{ article.title }}</h2>
+            <p>Author: {{ article.author }}</p>
+            {% if article.image %}
+            <img src="{{ article.image }}" alt="Article Image">
+            {% endif %}
+            <p>{{ article.summary }}</p>
+            <a href="{{ article.url }}">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    
+</body>
+</html>

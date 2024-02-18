@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="/static/intrests.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="head">Let's Select your interests.</h1>
+    <p class="head1">Please select one or more to proceed</p>
+
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Art</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Architecture</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Programming</span></button>
+    <br>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Chinese calligraphy</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Business</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Politics</span></button>
+    <br>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Cinema</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Dance</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Technology</span></button>
+    <br>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Illustration</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Fashion</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Graphic Design</span></button>
+    <br>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; International</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Literature</span></button>
+    <button class="slanted-button" onclick="handleClick(this)"><span>&#43; Sports</span></button>
+    <br>
+    <button class="Submitbutton">Submit</button>
+  </div>
+
+  <script>
+    function handleClick(button) {
+        var defaultBackgroundColor = "#fdfbf9";
+        var defaultTextColor = "#088242";
+        var clickedBackgroundColor = "#088242";
+        var clickedTextColor = "#fdfbf9";
+        
+        if (button.dataset.clicked === "true") {
+            // Button is already clicked, revert to default state
+            button.style.backgroundColor = defaultBackgroundColor;
+            button.style.color = defaultTextColor;
+            button.innerHTML = '<span>&#43; ' + button.textContent.trim().substring(2) + '</span>';
+            button.dataset.clicked = "false";
+        } else {
+            // Button is not clicked, update to clicked state
+            button.style.backgroundColor = clickedBackgroundColor;
+            button.style.color = clickedTextColor;
+            button.innerHTML = '<span>&#x2713; ' + button.textContent.trim().substring(2) + '</span>';
+            button.dataset.clicked = "true";
+        }
+    }
+    </script>
+    
+</body>
+</html>
