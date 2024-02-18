@@ -154,6 +154,11 @@ def spot():
     # Render the HTML page for the specified category
     return render_template('sports.html',articles=articles)
 
+@app.route('/about')
+def abt():
+    return render_template('about.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
