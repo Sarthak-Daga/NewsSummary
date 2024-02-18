@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background: url('/static/background1.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.Content {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Logo {
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
